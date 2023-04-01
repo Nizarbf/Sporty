@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sporty</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Swiper slider-->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <!-- Modal Video-->
+    <link rel="stylesheet" href="vendor/modal-video/css/modal-video.min.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600,800&amp;display=swap">
+    <!-- Device Mockup-->
+    <link rel="stylesheet" href="css/device-mockups.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="navbar">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="" width="110"></a>
+          <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link link-scroll active" href="#hero">Home <span class="sr-only"></span></a></li>
+              <li class="nav-item"><a class="nav-link link-scroll" href="#services">Services</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section-->
+    <section class="hero bg-top py-5" id="hero" style="background: url(img/banner-4.png) no-repeat; background-size: 100% 80%">
+      <div class="container py-5">
+        <div class="row py-5">
+          <div class="col-lg-5 py-5">
+            <h1>Download your best app </h1>
+            <p class="my-4 text-muted">An application for latest and most important sports news  in the world .</p>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mb-2 mb-lg-0"><a class="btn btn-primary btn-lg px-4" href="#!">Download</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 ml-auto">
+            <div class="device-wrapper mx-auto">
+              <div class="device shadow" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                <div class="screen"><img class="img-fluid" src="img/mobile.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section class="with-pattern-1 py-5" id="services">
+        <div class="container py-5">
+          <div class="row align-items-center mb-5 gy-5">
+            <div class="col-lg-6"><img class="img-fluid w-100 px-lg-5" src="img/objects.svg" alt=""></div>
+            <div class="col-lg-6">
+              <h2>The Services Of Sporty App :</h2>
+              <p class="text-muted">The Sporty application is an application that downloads the latest news related to sports, 
+                especially football, as the news in this application is correct and sure news, and it is 
+                downloaded on a daily basis, as it contains all the news of the transfers of the players, 
+                the results of the daily matches, and the latest and latest news of the famous clubs in the world .
+                 </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+    <!-- JavaScript files-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/modal-video/js/modal-video.js"></script>
+    <script src="js/front.js"></script>
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to BootstrapTemple website as you cannot 
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
+      
+    </script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+</html>
